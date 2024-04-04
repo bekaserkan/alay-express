@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
-import logo from "../../img/logo.svg";
+import logo from "../../img/logo.jpeg";
 import phone from "../../img/phone.svg";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { api } from "../../Api";
 import { IoMdTime } from "react-icons/io";
+import { MdOutlinePhoneEnabled } from "react-icons/md";
 
 const Header = () => {
   const [time, setTime] = useState([]);
@@ -46,8 +47,10 @@ const Header = () => {
           <div className="block">
             <div className="text_div">
               {" "}
-              <img className="icon" src={phone} alt="" />{" "}
-              <p className="text">+996 502 800 202</p>
+              <MdOutlinePhoneEnabled color="var(--main)" size={24} />
+              <a href="tel:0551578773">
+                <p className="text">+996 551 578 773</p>
+              </a>
             </div>
             <div className="text_div">
               {" "}
@@ -60,7 +63,9 @@ const Header = () => {
               <div className="text_div">
                 {" "}
                 <img className="icon" src={phone} alt="" />{" "}
-                <p className="text">+996 502 800 202</p>
+                <a href="tel:0551578773">
+                  <p className="text">+996 551 578 773</p>
+                </a>
               </div>
               <div className="text_div">
                 {" "}

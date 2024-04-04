@@ -4,7 +4,7 @@ import icon1 from "../../img/соцсети (5).svg";
 import icon2 from "../../img/соцсети (6).svg";
 import icon3 from "../../img/соцсети (7).svg";
 import icon4 from "../../img/соцсети (8).svg";
-import logo from "../../img/logo_two.svg";
+import logo from "../../img/logo.jpeg";
 
 const Footer = () => {
   return (
@@ -28,8 +28,8 @@ const Footer = () => {
             </div>
             <img src={logo} alt="" className="logo" />
             <div>
-              <p className="address">г.Бишкек пр. Манаса 64/1</p>
-              <p className="text">График с 10:00 до 19:00</p>
+              <p className="address">г. Ош, ул.Салиева 25</p>
+              <p className="text"></p>
             </div>
           </div>
         </div>
