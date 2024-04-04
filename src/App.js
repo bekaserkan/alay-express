@@ -42,10 +42,7 @@ function App() {
           path="dashboard"
           element={<PrivateRoute element={<Dashboard />} />}
         />
-        <Route
-          path="tracking"
-          element={<PrivateRoute element={<Tracking />} />}
-        />
+        <Route path="tracking" element={<Tracking />} />
       </Routes>
       <Footer />
     </div>
