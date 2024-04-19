@@ -4,6 +4,9 @@ import { api } from "../../Api";
 import Loading from "../../UI/Loading/Loading";
 import copyImage from "../../img/copy (1).svg";
 import { ALert } from "../../UI/Alert/Alert";
+import one from "../../videos/one.mp4";
+import two from "../../videos/two.mp4";
+import three from "../../videos/three.mp4";
 
 const Dashboard = () => {
   const [user, setUser] = useState([]);
@@ -75,7 +78,7 @@ const Dashboard = () => {
                   />
                 </div>
                 <div className="input_box">
-                  <label className="label_form">Трек код</label>
+                  <label className="label_form">Мой код</label>
                   <input
                     className="input_form"
                     value={user.code}
@@ -92,8 +95,9 @@ const Dashboard = () => {
                 <div className="login_form_head">
                   <span className="text_first">Адреса</span>
                 </div>
+
                 <div className="input_box">
-                  <label className="label_form">Трек код</label>
+                  <label className="label_form">Почтовый индекс</label>
                   <input
                     className="input_form"
                     value={"18160860859"}
@@ -109,7 +113,7 @@ const Dashboard = () => {
                   </span>
                 </div>
                 <div className="input_box">
-                  <label className="label_form">Трек код</label>
+                  <label className="label_form">Город</label>
                   <input
                     className="input_form"
                     value={"浙江省 金华市 义乌市"}
@@ -125,7 +129,7 @@ const Dashboard = () => {
                   </span>
                 </div>
                 <div className="input_box">
-                  <label className="label_form">Трек код</label>
+                  <label className="label_form">Склад</label>
                   <input
                     className="input_form"
                     value={"下湾2区 6栋7号 107仓库"}
@@ -142,47 +146,86 @@ const Dashboard = () => {
                 </div>
               </form>
             </div>
+            <div className="centering">
+              <form className="form">
+                <div className="login_form_head">
+                  <span className="text_first">Адреса</span>
+                </div>
+                <div className="input_box">
+                  <label className="label_form">Мой код</label>
+                  <input
+                    className="input_form"
+                    value={user.code}
+                    type="text"
+                    placeholder=""
+                    disabled={true}
+                  />
+                </div>
+                <div className="input_box">
+                  <label className="label_form">Почтовый индекс</label>
+                  <input
+                    className="input_form"
+                    value={"18160860859"}
+                    type="text"
+                    placeholder=""
+                    disabled={true}
+                  />
+                </div>
+                <div className="input_box">
+                  <label className="label_form">Город</label>
+                  <input
+                    className="input_form"
+                    value={"浙江省 金华市 义乌市"}
+                    type="text"
+                    placeholder=""
+                    disabled={true}
+                  />
+                </div>
+                <div className="input_box">
+                  <label className="label_form">Склад</label>
+                  <input
+                    className="input_form"
+                    value={"下湾2区 6栋7号 107仓库"}
+                    type="text"
+                    placeholder=""
+                    disabled={true}
+                  />
+                </div>
+                <div
+                  onClick={() =>
+                    copy(
+                      ` ${user.code} ` +
+                        " 18160860859  浙江省 金华市 义乌市  下湾2区 6栋7号 107仓库  " +
+                        ` ${user.code} ` +
+                        ` ${user.phone} `
+                    )
+                  }
+                  className="button_form"
+                >
+                  Скопировать все
+                </div>
+              </form>
+            </div>
             <div className="podwhite">
               <div className="video_box">
                 <h4>POIZON</h4>
 
                 <div className="video">
-                  <iframe
-                    className="video"
-                    src="https://www.youtube.com/embed/-Rl8DqH7ZLg"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <video className="video" src={one}></video>
                 </div>
               </div>
               <div className="video_box">
                 <h4>PINDUODUO</h4>
 
                 <div className="video">
-                  <iframe
-                    className="video"
-                    src="https://www.youtube.com/embed/-Rl8DqH7ZLg"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <video className="video" src={two}></video>
                 </div>
               </div>
               <div className="video_box">
                 <h4>TAOBAO</h4>
 
                 <div className="video">
-                  <iframe
-                    className="video"
-                    src="https://www.youtube.com/embed/-Rl8DqH7ZLg"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <video className="video" src={three}></video>
                 </div>
               </div>
             </div>
